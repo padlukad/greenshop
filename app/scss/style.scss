@@ -243,6 +243,22 @@
     padding: 6px 0 13px;
 }
 
+.breadcrumbs{
+    font-size: 15px;
+    line-height: 16px;
+    padding: 45px 0;
+    &__list{
+        display: flex;
+    }
+    &__item+.breadcrumbs__item{
+        margin-left: 5px;
+    }
+    &__link{
+        color: $title;
+        @extend %pt-700;
+    }
+}
+
 .top-slider{
     margin-bottom: 25px;
 }
