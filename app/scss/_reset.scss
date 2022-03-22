@@ -28,7 +28,7 @@ h6,
 li,
 ol[class],
 p,
-ul[class] {
+ul {
     margin: 0;
 }
 
@@ -46,6 +46,10 @@ input,
 select,
 textarea {
     font: inherit;
+}
+
+button {
+    cursor: pointer;
 }
 
 a {
