@@ -324,8 +324,87 @@
     }
 }
 
+.recomended{
+    margin-bottom: 100px;
+    &__inner{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 30px;
+    }
+}
+.recomended-item{
+    background-image: linear-gradient(to top, #fbfbfb 80%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0) 100%, #fbfbfb 100%);
+    background-position: bottom 80%;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+    overflow: hidden;
+    &::after{
+        content: '';
+        position: absolute;
+        width: 256px;
+        height: 256px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 1px solid $accent;
+        left: -33%;
+        bottom: -64%;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        width: 256px;
+        height: 256px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 1px solid $accent;
+        left: -35%;
+        bottom: -57%;
+    }
+    &__content{
+        max-width: 290px;
+        width: 100%;
+        text-align: right;
+        padding-bottom: 25px;;
+    }
+    &__imgbox{
+        max-width: 292px;
+        max-height: 292px;
+        padding-bottom: 10px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .title{
+        margin-bottom: 5px;
+    }
+    &__text{
+        margin-bottom: 15px;
+    }
+    &__link{
+        float: right;
+        width: 140px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $accent;
+        color: #fff;
+        border-radius: 6px;
+        svg{
+            margin-left: 10px;
+        }
+        path{
+            fill: #fff;
+        }
+    }
+}
+
 .blog{
-    margin-bottom: 120px;
+    margin-bottom: 100px;
     &__title{
         text-align: center;
         font-size: 30px;
@@ -399,6 +478,7 @@
             transition: all .3s;
             color: $accent;
             path{
+                transition: all .3s;
                 fill: $accent;
             }
         }
