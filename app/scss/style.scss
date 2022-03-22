@@ -28,6 +28,7 @@
         padding-bottom: 24px;
         &:hover{
             @extend %pt-700;
+            color: $accent;
             border-bottom: 3px solid $accent;
         }
     }
@@ -46,7 +47,9 @@
         justify-content: center;
         align-items: center;
         &:hover{
+ 
             path{
+                transition: all .3s;
                 fill: $accent;
             }
         }
@@ -82,87 +85,6 @@
         border-radius: 6px;
         svg{
             margin-right: 10px;
-        }
-    }
-}
-
-.top-slider{
-    margin-bottom: 25px;
-}
-
-.slider{
-    &__item{
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr);
-        background: linear-gradient(97.77deg, rgba(245, 245, 245, 0.5) -23.46%, rgba(245, 245, 245, 0.5) 107.51%);
-    }
-    &__content{
-        padding: 68px 40px 85px;
-    }
-    &__imgbox{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    &__item-subtitle{
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        color: $title;
-        margin-bottom: 7px;
-    }
-    .shop-title{
-        text-transform: uppercase;
-        font-size: 70px;
-        line-height: 70px;
-        color: $title;
-        @extend %pt-700;
-        span{
-            color: $accent;
-        }
-        margin-bottom: 5px;
-    }
-    &__item-text{
-        margin-bottom: 44px;
-    }
-    &__item-link{
-        width: 140px;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 6px;
-        text-transform: uppercase;
-        background-color: $accent;
-        color: #fff;
-        @extend %pt-700;
-    }
-    .slick-dots{
-        position: absolute;
-        right: 0;
-        left: 0;
-        bottom: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        li{
-            opacity: 0.3;
-            
-        }
-        li+li{
-            margin-left: 8px;
-        }
-        button{
-            padding: 0;
-            margin: 0;
-            width: 8px;
-            height: 8px;
-            border: none;
-            border-radius: 50%;
-            font-size: 0;
-            background-color: $accent;
-        }
-        .slick-active{
-            opacity: 1;
         }
     }
 }
@@ -319,6 +241,168 @@
 .footer-basement{
     text-align: center;
     padding: 6px 0 13px;
+}
+
+.top-slider{
+    margin-bottom: 25px;
+}
+
+.slider{
+    &__item{
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        background: linear-gradient(97.77deg, rgba(245, 245, 245, 0.5) -23.46%, rgba(245, 245, 245, 0.5) 107.51%);
+    }
+    &__content{
+        padding: 68px 40px 85px;
+    }
+    &__imgbox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__item-subtitle{
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: $title;
+        margin-bottom: 7px;
+    }
+    .shop-title{
+        text-transform: uppercase;
+        font-size: 70px;
+        line-height: 70px;
+        color: $title;
+        @extend %pt-700;
+        span{
+            color: $accent;
+        }
+        margin-bottom: 5px;
+    }
+    &__item-text{
+        margin-bottom: 44px;
+    }
+    &__item-link{
+        width: 140px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        text-transform: uppercase;
+        background-color: $accent;
+        color: #fff;
+        @extend %pt-700;
+    }
+    .slick-dots{
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        li{
+            opacity: 0.3;
+            
+        }
+        li+li{
+            margin-left: 8px;
+        }
+        button{
+            padding: 0;
+            margin: 0;
+            width: 8px;
+            height: 8px;
+            border: none;
+            border-radius: 50%;
+            font-size: 0;
+            background-color: $accent;
+        }
+        .slick-active{
+            opacity: 1;
+        }
+    }
+}
+
+.blog{
+    margin-bottom: 120px;
+    &__title{
+        text-align: center;
+        font-size: 30px;
+        line-height: 36px;
+        color: $title;
+        margin-bottom: 15px;
+        @extend %pt-700;
+    }
+    &__text{
+        text-align: center;
+        margin-bottom: 35px;
+    }
+    &__content{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 40px;
+    }
+    &__item-imgbox{
+        max-width: 270px;
+        width: 100%;
+        max-height: 196px;
+        height: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__item-inner{
+        padding: 10px;
+    }
+    &__item-info{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 5px;
+        color: $accent;
+    }
+    &__info-date{
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 22px;
+            background-color: $accent;
+            bottom: 0;
+            right: -15px;
+        }
+    }
+    .title{
+        margin-bottom: 5px;
+    }
+    &__item-text{
+        margin-bottom: 10px;
+    }
+    &__item-linkbox{
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    &__item-link{
+        color: $title;
+        position: relative;
+        svg{
+            position: absolute;
+            top: 3px;
+
+            margin-left: 10px;
+        }
+        &:hover{
+            transition: all .3s;
+            color: $accent;
+            path{
+                fill: $accent;
+            }
+        }
+    }
 }
 
 @import 'media';
