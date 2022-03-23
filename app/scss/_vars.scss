@@ -12,3 +12,11 @@ $bg: #FBFBFB;
     font-family: 'PTSans-Regular';
     font-weight: 400;
 }
+
+%checkbox-hidden{
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+}

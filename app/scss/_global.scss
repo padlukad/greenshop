@@ -27,3 +27,53 @@ body{
     line-height: 24px;
     color: $title;
 }
+
+.pagination{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 18px;
+    line-height: 16px;
+    margin-top: 70px;
+    &__list{
+        display: flex;
+    }
+    &__list-item+.pagination__list-item{
+        margin-left: 10px;
+    }
+    &__arrows{
+        &:hover{
+            transition: all .3s;
+            background-color: $accent;
+            color: #fff;
+            path{
+                transition: all .3s;
+                stroke: #fff;
+            }
+        }
+    }
+    &__prev{
+        margin-right: 10px;
+        transform: rotate(180deg);
+    }
+    &__next{
+        margin-left: 10px;
+    }
+    a{
+        width: 35px;
+        height: 35px;
+        border-radius: 4px;
+        border: 1px solid #E5E5E5;
+        color: $default;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &.current-page{
+            background-color: $accent;
+            color: #fff;
+            path{
+                stroke: #fff;
+            }
+        }
+    }
+}
