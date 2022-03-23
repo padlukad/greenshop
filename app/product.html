@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenShop</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a class="logo" href="#">
+                    <img class="logo_img" src="images/logo.png" alt="logo">
+                </a>
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="#">
+                                Home
+                            </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="#">
+                                Shop
+                            </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="#">
+                                Plant Care
+                            </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="#">
+                                Blogs
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="user-nav">
+                    <ul class="user-nav__list">
+                        <li class="user-nav__list-item">
+                            <a href="#" class="user-nav__item-link">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M14.5726 16.0029C10.5755 19.1865 4.988 18.3056 2.02842 14.6542C-0.828088 11.129 -0.64944 6.04347 2.44943 2.82482C5.65137 -0.500594 10.6854 -0.944524 14.3346 1.78337C15.642 2.76051 16.6183 4.00364 17.2542 5.50838C17.8938 7.02186 18.0881 8.59654 17.8663 10.2205C17.6452 11.837 17 13.2775 15.9499 14.6217C16.0349 14.6773 16.1255 14.7173 16.1904 14.7822C17.3448 15.9311 18.4947 17.0843 19.6491 18.2331C19.9227 18.5054 20.0589 18.8225 19.9776 19.2047C19.8165 19.9651 18.9107 20.2586 18.3298 19.7366C18.0575 19.4925 17.807 19.2234 17.5484 18.9649C16.6002 18.0177 15.6526 17.0699 14.7044 16.1227C14.665 16.0853 14.6238 16.0503 14.5726 16.0029ZM15.9605 8.98677C15.9705 5.12689 12.8529 2.00627 8.98261 2.00065C5.12292 1.99503 2.00781 5.09068 1.99094 8.94806C1.97408 12.8173 5.08544 15.9467 8.96762 15.9648C12.8117 15.9829 15.9505 12.8504 15.9605 8.98677Z"
+                                        fill="#3D3D3D" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="user-nav__list-item">
+                            <a href="#" class="user-nav__item-link">
+                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M17.1567 20.25H9.89163C6.79003 20.25 4.26667 17.7267 4.26667 14.6251V8.85947C4.26667 5.9762 2.82958 3.30739 0.422521 1.72031C-0.00975775 1.43531 -0.129101 0.853876 0.155897 0.421598C0.440896 -0.0107278 1.02228 -0.130118 1.45465 0.154974C2.82874 1.06097 3.94351 2.2559 4.74067 3.63167C4.91293 3.82466 6.30202 5.29699 8.57919 5.29699H19.3748C22.3201 5.24191 24.6254 8.19769 23.8554 11.0406L22.6126 15.9939C21.9839 18.4998 19.7404 20.25 17.1567 20.25ZM5.90513 6.64234C6.06099 7.36238 6.14166 8.10483 6.14166 8.85947V14.6251C6.14166 16.6928 7.8239 18.375 9.89163 18.375H17.1567C18.8792 18.375 20.3748 17.2082 20.794 15.5376L22.0367 10.5844C22.4943 8.89509 21.1243 7.13931 19.3748 7.17198H8.57914C7.54926 7.17198 6.65283 6.94993 5.90513 6.64234ZM9.42289 22.8281C9.42289 22.1809 8.89822 21.6563 8.25102 21.6563C6.69609 21.7182 6.69745 23.9387 8.25102 24C8.89822 24 9.42289 23.4753 9.42289 22.8281ZM18.751 22.8281C18.751 22.1809 18.2263 21.6563 17.5791 21.6563C16.0242 21.7182 16.0255 23.9387 17.5791 24C18.2263 24 18.751 23.4753 18.751 22.8281ZM20.3123 9.98446C20.3123 9.46668 19.8925 9.04697 19.3748 9.04697H8.95414C7.71027 9.09647 7.71121 10.8729 8.95414 10.922H19.3748C19.8925 10.922 20.3123 10.5022 20.3123 9.98446Z"
+                                        fill="#3D3D3D" />
+                                </svg>
+                                <span class="user-nav__link-num">6</span>
+                            </a>
+                        </li>
+                        <li class="user-nav__list-item">
+                            <button class="user-nav__btn">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.1601 10.1006H8.12598" stroke="white" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M15.7212 7.67059L18.1612 10.1006L15.7212 12.5306" stroke="white"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M13.6342 6.35823C13.3592 3.3749 12.2425 2.29156 7.80082 2.29156C1.88332 2.29156 1.88332 4.21656 1.88332 9.9999C1.88332 15.7832 1.88332 17.7082 7.80082 17.7082C12.2425 17.7082 13.3592 16.6249 13.6342 13.6416"
+                                        stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                Login
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="top">
+            <div class="container">
+                <div class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">
+                                Home
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <span>/</span>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <span>Shop</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="product-page">
+            <div class="container">
+                <div class="product-page__inner">
+                    <div class="product-page__slider">
+                        <div class="product-page__slider-thumb">
+                            <div class="product-page__thumb-item">
+                                <img src="images/product-page/1.png" alt="slide">
+                            </div>
+                            <div class="product-page__thumb-item">
+                                <img src="images/product-page/2.png" alt="slide">
+                            </div>
+                            <div class="product-page__thumb-item">
+                                <img src="images/product-page/3.png" alt="slide">
+                            </div>
+                            <div class="product-page__thumb-item">
+                                <img src="images/product-page/4.png" alt="slide">
+                            </div>
+                        </div>
+                        <div class="product-page__slider-big">
+                            <div class="product-page__big-item">
+                                <img src="images/product-page/1.png" alt="slide">
+                            </div>
+                            <div class="product-page__big-item">
+                                <img src="images/product-page/2.png" alt="slide">
+                            </div>
+                            <div class="product-page__big-item">
+                                <img src="images/product-page/3.png" alt="slide">
+                            </div>
+                            <div class="product-page__big-item">
+                                <img src="images/product-page/4.png" alt="slide">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-page__content">
+                        <h2 class="product-page__title">
+                            Barberton Daisy
+                        </h2>
+                        <div class="product-page__wrapper">
+                            <div class="product-page__price">
+                                $119.00
+                            </div>
+                            <div class="product-page__info">
+                                <div class="star" data-rateyo-rating="4" style="padding: 0"></div>
+                                <div class="product-page__info-reviews">
+                                    19 Customer Review
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-page__description">
+                            <h6 class="product-page__description-title">
+                                Short Description:
+                            </h6>
+                            <p>
+                                The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. 
+                            </p>
+                            <form class="product-page__form" action="#">
+                                <div class="product-page__filter-size">
+                                    <div class="product-page__filter-title">
+                                        Size:
+                                    </div> 
+                                    <label class="product-page__size-label">
+                                        <input class="product-page__size-input" type="radio" name="size">
+                                        <span class="product-page__size-checkbox">S</span>
+                                    </label>
+                                    <label class="product-page__size-label">
+                                        <input class="product-page__size-input" type="radio" name="size">
+                                        <span class="product-page__size-checkbox">M</span>
+                                    </label>
+                                    <label class="product-page__size-label">
+                                        <input class="product-page__size-input" type="radio" name="size">
+                                        <span class="product-page__size-checkbox">L</span>
+                                    </label>
+                                    <label class="product-page__size-label">
+                                        <input class="product-page__size-input" type="radio" name="size">
+                                        <span class="product-page__size-checkbox">XL</span>
+                                    </label>
+                                </div>
+                                <label class="product-page__form-label product-page__box">
+                                    <input class="product-page__form-num" type="number">
+                                    <button class="product-page__form-btn product-page__form-buy" type="submit">
+                                        Buy NOW
+                                    </button>
+                                    <button class="product-page__form-btn product-page__form-cart" type="submit">
+                                        Add to cart
+                                    </button>
+                                    <button class="product-page__form-btn product-page__form-heart" type="submit">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10 18.8873C9.71527 18.8873 9.44077 18.7842 9.22684 18.5968C8.41888 17.8903 7.63992 17.2264 6.95267 16.6408L6.94916 16.6377C4.93423 14.9207 3.19427 13.4378 1.98364 11.9771C0.630341 10.3441 0 8.79578 0 7.10434C0 5.46097 0.563507 3.94485 1.58661 2.83508C2.62192 1.71219 4.04251 1.09375 5.58716 1.09375C6.74164 1.09375 7.79892 1.45874 8.72955 2.1785C9.19922 2.54181 9.62494 2.98645 10 3.5051C10.3752 2.98645 10.8008 2.54181 11.2706 2.1785C12.2012 1.45874 13.2585 1.09375 14.413 1.09375C15.9575 1.09375 17.3782 1.71219 18.4135 2.83508C19.4366 3.94485 20 5.46097 20 7.10434C20 8.79578 19.3698 10.3441 18.0165 11.9769C16.8059 13.4378 15.0661 14.9205 13.0515 16.6374C12.363 17.224 11.5828 17.8889 10.773 18.5971C10.5592 18.7842 10.2846 18.8873 10 18.8873ZM5.58716 2.26532C4.37363 2.26532 3.25882 2.74963 2.44781 3.62915C1.62476 4.52194 1.17142 5.75607 1.17142 7.10434C1.17142 8.52692 1.70013 9.79919 2.88559 11.2296C4.03137 12.6122 5.73563 14.0645 7.70889 15.7462L7.71255 15.7492C8.4024 16.3371 9.18442 17.0036 9.99832 17.7153C10.8171 17.0023 11.6003 16.3347 12.2916 15.7458C14.2647 14.0642 15.9688 12.6122 17.1146 11.2296C18.2999 9.79919 18.8286 8.52692 18.8286 7.10434C18.8286 5.75607 18.3752 4.52194 17.5522 3.62915C16.7413 2.74963 15.6264 2.26532 14.413 2.26532C13.524 2.26532 12.7078 2.54791 11.9872 3.10516C11.3449 3.60199 10.8975 4.23004 10.6352 4.66949C10.5003 4.89548 10.2629 5.03036 10 5.03036C9.73709 5.03036 9.49966 4.89548 9.36478 4.66949C9.10263 4.23004 8.65524 3.60199 8.01285 3.10516C7.29218 2.54791 6.47598 2.26532 5.58716 2.26532Z" fill="#46A358"/>
+                                        </svg>
+                                    </button>
+                                </label>
+                            </form>                            
+                            <div class="product-page__description-sku">
+                                SKU: <span>1995751877966</span>
+                            </div>
+                            <div class="product-page__description-categories">
+                                Categories: <span>Potter Plants</span>
+                            </div>
+                            <div class="product-page__description-tags">
+                                Tags:
+                                <a class="product-page__description-tag" href="#">
+                                    Home 
+                                </a>,
+                                <a class="product-page__description-tag" href="#">
+                                    Garden 
+                                </a>,
+                                <a class="product-page__description-tag" href="#">
+                                    Plants
+                                </a>                                
+                            </div>
+                        </div>
+                        <div class="product-page__share">
+                            <span>Share this products:</span>
+                            <ul class="product-page__share-list">
+                                <li>
+                                    <a class="product-page__share-link" href="#">
+                                        <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.875 5H0V7.5H1.875V15H5V7.5H7.25L7.5 5H5V3.9375C5 3.375 5.125 3.125 5.6875 3.125H7.5V0H5.125C2.875 0 1.875 1 1.875 2.875V5Z" fill="#3D3D3D"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="product-page__share-link" href="#">
+                                        <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.71737 12.1908C10.378 12.1908 13.4736 7.50111 13.4736 3.4346C13.4736 3.30135 13.4709 3.1688 13.4647 3.03675C14.0656 2.60239 14.588 2.06021 15 1.44331C14.4486 1.6883 13.8552 1.85327 13.2327 1.92765C13.868 1.54669 14.356 0.94378 14.5861 0.225197C13.9914 0.577835 13.3329 0.834082 12.632 0.972271C12.0702 0.374134 11.2704 0 10.3855 0C8.68578 0 7.30747 1.37831 7.30747 3.07718C7.30747 3.31876 7.3346 3.55351 7.38715 3.77887C4.82962 3.65041 2.56162 2.42565 1.04392 0.563675C0.779318 1.01833 0.626969 1.54686 0.626969 2.11037C0.626969 3.17801 1.17034 4.12059 1.99658 4.67216C1.49176 4.65663 1.01748 4.51776 0.602743 4.2871C0.602061 4.2999 0.602061 4.31286 0.602061 4.32634C0.602061 5.81691 1.66305 7.06129 3.07104 7.3433C2.81257 7.41376 2.54063 7.45163 2.25982 7.45163C2.06158 7.45163 1.86879 7.43184 1.6813 7.39619C2.07301 8.61873 3.20923 9.5086 4.55632 9.53368C3.50284 10.3592 2.17588 10.8511 0.734108 10.8511C0.48588 10.8511 0.240893 10.8369 0 10.8084C1.36193 11.6812 2.97908 12.1908 4.71737 12.1908Z" fill="#3D3D3D"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="product-page__share-link" href="#">
+                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.125 1.5625C3.125 2.4375 2.4375 3.125 1.5625 3.125C0.6875 3.125 0 2.4375 0 1.5625C0 0.6875 0.6875 0 1.5625 0C2.4375 0 3.125 0.6875 3.125 1.5625ZM3.125 4.375H0V14.375H3.125V4.375ZM8.125 4.375H5V14.375H8.125V9.125C8.125 6.1875 11.875 5.9375 11.875 9.125V14.375H15V8.0625C15 3.125 9.4375 3.3125 8.125 5.75V4.375Z" fill="#3D3D3D"/>
+                                        </svg>                                           
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="product-page__share-link" href="#">
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 4.09091C7.30168 4.09091 4.98846 4.2365 3.51951 4.34356C3.03167 4.37911 2.65385 4.76529 2.65385 5.23696V5.76996L8.53304 8.85802C8.82344 9.01056 9.17656 9.01056 9.46697 8.85802L15.3462 5.76996V5.23696C15.3462 4.76529 14.9683 4.37911 14.4805 4.34356C13.0115 4.2365 10.6983 4.09091 9 4.09091ZM15.3462 7.01792L10.0273 9.81165C9.38843 10.1472 8.61157 10.1472 7.97268 9.81165L2.65385 7.01792V12.763C2.65385 13.2347 3.03167 13.6209 3.51951 13.6564C4.98846 13.7635 7.30168 13.9091 9 13.9091C10.6983 13.9091 13.0115 13.7635 14.4805 13.6564C14.9683 13.6209 15.3462 13.2347 15.3462 12.763V7.01792ZM3.43083 3.25588C4.90066 3.14876 7.25301 3 9 3C10.747 3 13.0993 3.14876 14.5692 3.25588C15.6676 3.33593 16.5 4.20441 16.5 5.23696V12.763C16.5 13.7956 15.6676 14.6641 14.5692 14.7441C13.0993 14.8512 10.747 15 9 15C7.25301 15 4.90066 14.8512 3.43083 14.7441C2.33237 14.6641 1.5 13.7956 1.5 12.763V5.23696C1.5 4.20441 2.33237 3.33593 3.43083 3.25588Z" fill="#3D3D3D"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="related">
+            <div class="container">
+                <h4 class="related__title accent-title">
+                    Releted Products
+                </h4>
+                <div class="related__slider">
+                    <div class="related-product">
+                        <div class="related-product__imgbox">
+                            <img src="images/related/1.png" alt="related product picture">
+                        </div>
+                        <div class="related-product__info">
+                            <div class="related-product__info-name">
+                                Beach Spider Lily
+                            </div>
+                            <div class="related-product__info-price">
+                                <div class="related-product__info-price--new">
+                                    $129.00
+                                </div>
+                                <div class="related-product__info-price--old">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="related-product">
+                        <div class="related-product__imgbox">
+                            <img src="images/related/2.png" alt="related product picture">
+                        </div>
+                        <div class="related-product__info">
+                            <div class="related-product__info-name">
+                                Blushing Bromeliad
+                            </div>
+                            <div class="related-product__info-price">
+                                <div class="related-product__info-price--new">
+                                    $139.00
+                                </div>
+                                <div class="related-product__info-price--old">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="related-product">
+                        <div class="related-product__imgbox">
+                            <img src="images/related/1.png" alt="related product picture">
+                        </div>
+                        <div class="related-product__info">
+                            <div class="related-product__info-name">
+                                Aluminum Plant
+                            </div>
+                            <div class="related-product__info-price">
+                                <div class="related-product__info-price--new">
+                                    $179.00
+                                </div>
+                                <div class="related-product__info-price--old">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="related-product">
+                        <div class="related-product__imgbox">
+                            <img src="images/related/4.png" alt="related product picture">
+                        </div>
+                        <div class="related-product__info">
+                            <div class="related-product__info-name">
+                                Bird's Nest Fern
+                            </div>
+                            <div class="related-product__info-price">
+                                <div class="related-product__info-price--new">
+                                    $99.00
+                                </div>
+                                <div class="related-product__info-price--old">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="related-product">
+                        <div class="related-product__imgbox">
+                            <img src="images/related/5.png" alt="related product picture">
+                        </div>
+                        <div class="related-product__info">
+                            <div class="related-product__info-name">
+                                Chinese Evergreen
+                            </div>
+                            <div class="related-product__info-price">
+                                <div class="related-product__info-price--new">
+                                    $39.00
+                                </div>
+                                <div class="related-product__info-price--old">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="related-product">
+                        <div class="related-product__imgbox">
+                            <img src="images/related/1.png" alt="related product picture">
+                        </div>
+                        <div class="related-product__info">
+                            <div class="related-product__info-name">
+                                Beach Spider Lily
+                            </div>
+                            <div class="related-product__info-price">
+                                <div class="related-product__info-price--new">
+                                    $129.00
+                                </div>
+                                <div class="related-product__info-price--old">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="related-product">
+                        <div class="related-product__imgbox">
+                            <img src="images/related/2.png" alt="related product picture">
+                        </div>
+                        <div class="related-product__info">
+                            <div class="related-product__info-name">
+                                Blushing Bromeliad
+                            </div>
+                            <div class="related-product__info-price">
+                                <div class="related-product__info-price--new">
+                                    $139.00
+                                </div>
+                                <div class="related-product__info-price--old">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="related-product">
+                        <div class="related-product__imgbox">
+                            <img src="images/related/1.png" alt="related product picture">
+                        </div>
+                        <div class="related-product__info">
+                            <div class="related-product__info-name">
+                                Aluminum Plant
+                            </div>
+                            <div class="related-product__info-price">
+                                <div class="related-product__info-price--new">
+                                    $179.00
+                                </div>
+                                <div class="related-product__info-price--old">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="related-product">
+                        <div class="related-product__imgbox">
+                            <img src="images/related/4.png" alt="related product picture">
+                        </div>
+                        <div class="related-product__info">
+                            <div class="related-product__info-name">
+                                Bird's Nest Fern
+                            </div>
+                            <div class="related-product__info-price">
+                                <div class="related-product__info-price--new">
+                                    $99.00
+                                </div>
+                                <div class="related-product__info-price--old">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="related-product">
+                        <div class="related-product__imgbox">
+                            <img src="images/related/5.png" alt="related product picture">
+                        </div>
+                        <div class="related-product__info">
+                            <div class="related-product__info-name">
+                                Chinese Evergreen
+                            </div>
+                            <div class="related-product__info-price">
+                                <div class="related-product__info-price--new">
+                                    $39.00
+                                </div>
+                                <div class="related-product__info-price--old">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="related-product">
+                        <div class="related-product__imgbox">
+                            <img src="images/related/1.png" alt="related product picture">
+                        </div>
+                        <div class="related-product__info">
+                            <div class="related-product__info-name">
+                                Beach Spider Lily
+                            </div>
+                            <div class="related-product__info-price">
+                                <div class="related-product__info-price--new">
+                                    $129.00
+                                </div>
+                                <div class="related-product__info-price--old">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="related-product">
+                        <div class="related-product__imgbox">
+                            <img src="images/related/2.png" alt="related product picture">
+                        </div>
+                        <div class="related-product__info">
+                            <div class="related-product__info-name">
+                                Blushing Bromeliad
+                            </div>
+                            <div class="related-product__info-price">
+                                <div class="related-product__info-price--new">
+                                    $139.00
+                                </div>
+                                <div class="related-product__info-price--old">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="related-product">
+                        <div class="related-product__imgbox">
+                            <img src="images/related/1.png" alt="related product picture">
+                        </div>
+                        <div class="related-product__info">
+                            <div class="related-product__info-name">
+                                Aluminum Plant
+                            </div>
+                            <div class="related-product__info-price">
+                                <div class="related-product__info-price--new">
+                                    $179.00
+                                </div>
+                                <div class="related-product__info-price--old">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="related-product">
+                        <div class="related-product__imgbox">
+                            <img src="images/related/4.png" alt="related product picture">
+                        </div>
+                        <div class="related-product__info">
+                            <div class="related-product__info-name">
+                                Bird's Nest Fern
+                            </div>
+                            <div class="related-product__info-price">
+                                <div class="related-product__info-price--new">
+                                    $99.00
+                                </div>
+                                <div class="related-product__info-price--old">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="related-product">
+                        <div class="related-product__imgbox">
+                            <img src="images/related/5.png" alt="related product picture">
+                        </div>
+                        <div class="related-product__info">
+                            <div class="related-product__info-name">
+                                Chinese Evergreen
+                            </div>
+                            <div class="related-product__info-price">
+                                <div class="related-product__info-price--new">
+                                    $39.00
+                                </div>
+                                <div class="related-product__info-price--old">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-top__item footer__item">
+                    <div class="footer-top__item-imgbox">
+                        <img class="footer-top__item-img" src="images/icons/footer-top-1.svg" alt="picture">
+                    </div>
+                    <h3 class="title">
+                        Garden Care
+                    </h3>
+                    <p class="footer-top__item-text">
+                        We are an online plant shop offering a wide range of cheap and trendy plants.
+                    </p>
+                </div>
+                <div class="footer-top__item footer__item">
+                    <div class="footer-top__item-imgbox">
+                        <img class="footer-top__item-img" src="images/icons/footer-top-2.svg" alt="picture">
+                    </div>
+                    <h3 class="title">
+                        Plant Renovation
+                    </h3>
+                    <p class="footer-top__item-text">
+                        We are an online plant shop offering a wide range of cheap and trendy plants.
+                    </p>
+                </div>
+                <div class="footer-top__item footer__item">
+                    <div class="footer-top__item-imgbox">
+                        <img class="footer-top__item-img" src="images/icons/footer-top-3.svg" alt="picture">
+                    </div>
+                    <h3 class="title">
+                        Watering Graden
+                    </h3>
+                    <p class="footer-top__item-text">
+                        We are an online plant shop offering a wide range of cheap and trendy plants.
+                    </p>
+                </div>
+                <div class="footer-top__item footer__item footer__item-last">
+                    <h3 class="title">
+                        Would you like to join newsletters?
+                    </h3>
+                    <form class="footer-top__form" action="#">
+                        <input type="email" class="footer-top__form-input" placeholder="enter your email address...">
+                        <button class="footer-top__form-btn" type="submit">
+                            Join
+                        </button>
+                    </form>
+                    <p class="footer-top__item-text">
+                        We usually post offers and challenges in newsletter. We’re your online houseplant destination.
+                        We offer a wide range of houseplants and accessories shipped directly from our (green)house to
+                        yours!
+                    </p>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <div class="footer__item">
+                    <a class="logo" href="#">
+                        <img class="logo__img" src="images/logo.png" alt="logo">
+                    </a>
+                </div>
+                <div class="footer__item">
+                    <a href="#" class="footer-contact__address footer-contact__link">
+                        70 West Buckingham Ave. Farmingdale, NY 11735
+                    </a>
+                </div>
+                <div class="footer__item">
+                    <a class="footer-contact__email footer-contact__link" href="mailto:contact@greenshop.com">
+                        contact@greenshop.com
+                    </a>
+                </div>
+                <div class="footer__item footer__item-last">
+                    <a class="footer-contact__phone footer-contact__link" href="tel:+8801911717490">
+                        +88 01911 717 490
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer__item">
+                    <h3 class="title">
+                        My Account
+                    </h3>
+                    <ul class="footer-bottom__list">
+                        <li class="footer-bottom__list-item">
+                            <a href="#" class="footer-bottom__list-link">
+                                My Account
+                            </a>
+                        </li>
+                        <li class="footer-bottom__list-item">
+                            <a href="#" class="footer-bottom__list-link">
+                                Our stores
+                            </a>
+                        </li>
+                        <li class="footer-bottom__list-item">
+                            <a href="#" class="footer-bottom__list-link">
+                                Contact us
+                            </a>
+                        </li>
+                        <li class="footer-bottom__list-item">
+                            <a href="#" class="footer-bottom__list-link">
+                                Career
+                            </a>
+                        </li>
+                        <li class="footer-bottom__list-item">
+                            <a href="#" class="footer-bottom__list-link">
+                                Specials
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__item">
+                    <h3 class="title">
+                        Help & Guide
+                    </h3>
+                    <ul class="footer-bottom__list">
+                        <li class="footer-bottom__list-item">
+                            <a href="#" class="footer-bottom__list-link">
+                                Help Center
+                            </a>
+                        </li>
+                        <li class="footer-bottom__list-item">
+                            <a href="#" class="footer-bottom__list-link">
+                                How to Buy
+                            </a>
+                        </li>
+                        <li class="footer-bottom__list-item">
+                            <a href="#" class="footer-bottom__list-link">
+                                Shipping & Delivery
+                            </a>
+                        </li>
+                        <li class="footer-bottom__list-item">
+                            <a href="#" class="footer-bottom__list-link">
+                                Product Policy
+                            </a>
+                        </li>
+                        <li class="footer-bottom__list-item">
+                            <a href="#" class="footer-bottom__list-link">
+                                How to Return
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__item">
+                    <h3 class="title">
+                        Categories
+                    </h3>
+                    <ul class="footer-bottom__list">
+                        <li class="footer-bottom__list-item">
+                            <a href="#" class="footer-bottom__list-link">
+                                House Plants
+                            </a>
+                        </li>
+                        <li class="footer-bottom__list-item">
+                            <a href="#" class="footer-bottom__list-link">
+                                Potter Plants
+                            </a>
+                        </li>
+                        <li class="footer-bottom__list-item">
+                            <a href="#" class="footer-bottom__list-link">
+                                Seeds
+                            </a>
+                        </li>
+                        <li class="footer-bottom__list-item">
+                            <a href="#" class="footer-bottom__list-link">
+                                Small Plants
+                            </a>
+                        </li>
+                        <li class="footer-bottom__list-item">
+                            <a href="#" class="footer-bottom__list-link">
+                                Accessories
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__item footer__item-last">
+                    <h3 class="title">
+                        Social Media
+                    </h3>
+                    <ul class="social-list">
+                        <li class="social-list__item">
+                            <a class="social-list__link" href="#">
+                                <svg width="8" height="16" viewBox="0 0 8 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M2 5.33333H0V8H2V16H5.33333V8H7.73333L8 5.33333H5.33333V4.2C5.33333 3.6 5.46667 3.33333 6.06667 3.33333H8V0H5.46667C3.06667 0 2 1.06667 2 3.06667V5.33333Z"
+                                        fill="#46A358" fill-opacity="0.6" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-list__item">
+                            <a class="social-list__link" href="#">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8 1.46667C10.1333 1.46667 10.4 1.46667 11.2667 1.53333C13.4667 1.6 14.4667 2.66667 14.5333 4.8C14.6 5.66667 14.6 5.86667 14.6 8C14.6 10.1333 14.6 10.4 14.5333 11.2C14.4667 13.3333 13.4 14.4 11.2667 14.4667C10.4 14.5333 10.2 14.5333 8 14.5333C5.86667 14.5333 5.6 14.5333 4.8 14.4667C2.6 14.4 1.6 13.3333 1.53333 11.2C1.46667 10.3333 1.46667 10.1333 1.46667 8C1.46667 5.86667 1.46667 5.6 1.53333 4.8C1.6 2.66667 2.66667 1.6 4.8 1.53333C5.6 1.46667 5.86667 1.46667 8 1.46667ZM8 0C5.8 0 5.53333 0 4.73333 0.0666667C1.8 0.2 0.2 1.8 0.0666667 4.73333C0 5.53333 0 5.8 0 8C0 10.2 0 10.4667 0.0666667 11.2667C0.2 14.2 1.8 15.8 4.73333 15.9333C5.53333 16 5.8 16 8 16C10.2 16 10.4667 16 11.2667 15.9333C14.2 15.8 15.8 14.2 15.9333 11.2667C16 10.4667 16 10.2 16 8C16 5.8 16 5.53333 15.9333 4.73333C15.8 1.8 14.2 0.2 11.2667 0.0666667C10.4667 0 10.2 0 8 0ZM8 3.86667C5.73333 3.86667 3.86667 5.73333 3.86667 8C3.86667 10.2667 5.73333 12.1333 8 12.1333C10.2667 12.1333 12.1333 10.2667 12.1333 8C12.1333 5.73333 10.2667 3.86667 8 3.86667ZM8 10.6667C6.53333 10.6667 5.33333 9.46667 5.33333 8C5.33333 6.53333 6.53333 5.33333 8 5.33333C9.46667 5.33333 10.6667 6.53333 10.6667 8C10.6667 9.46667 9.46667 10.6667 8 10.6667ZM12.2667 2.8C11.7333 2.8 11.3333 3.2 11.3333 3.73333C11.3333 4.26667 11.7333 4.66667 12.2667 4.66667C12.8 4.66667 13.2 4.26667 13.2 3.73333C13.2 3.2 12.8 2.8 12.2667 2.8Z"
+                                        fill="#46A358" fill-opacity="0.6" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-list__item">
+                            <a class="social-list__link" href="#">
+                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.03186 13.0036C11.0699 13.0036 14.3718 8.00118 14.3718 3.66357C14.3718 3.52144 14.3689 3.38005 14.3624 3.2392C15.0033 2.77588 15.5605 2.19756 16 1.53953C15.4118 1.80085 14.7789 1.97682 14.1149 2.05616C14.7926 1.64981 15.313 1.0067 15.5585 0.24021C14.9241 0.616357 14.2217 0.889688 13.4742 1.03709C12.8749 0.399076 12.0218 0 11.0779 0C9.26483 0 7.79464 1.4702 7.79464 3.28233C7.79464 3.54001 7.82357 3.79041 7.87962 4.0308C5.1516 3.89377 2.73239 2.58735 1.11352 0.601253C0.831273 1.08622 0.668767 1.64999 0.668767 2.25106C0.668767 3.38988 1.24837 4.3953 2.12968 4.98363C1.59121 4.96707 1.08531 4.81894 0.642926 4.57291C0.642198 4.58656 0.642198 4.60039 0.642198 4.61476C0.642198 6.2047 1.77392 7.53204 3.27578 7.83285C3.00008 7.90801 2.71001 7.94841 2.41047 7.94841C2.19901 7.94841 1.99338 7.9273 1.79339 7.88927C2.21121 9.19332 3.42318 10.1425 4.86007 10.1693C3.73636 11.0499 2.32094 11.5745 0.783049 11.5745C0.518272 11.5745 0.256952 11.5594 0 11.529C1.45273 12.46 3.17769 13.0036 5.03186 13.0036Z"
+                                        fill="#46A358" fill-opacity="0.6" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-list__item">
+                            <a class="social-list__link" href="#">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M3.33333 1.66667C3.33333 2.6 2.6 3.33333 1.66667 3.33333C0.733333 3.33333 0 2.6 0 1.66667C0 0.733333 0.733333 0 1.66667 0C2.6 0 3.33333 0.733333 3.33333 1.66667ZM3.33333 4.66667H0V15.3333H3.33333V4.66667ZM8.66667 4.66667H5.33333V15.3333H8.66667V9.73333C8.66667 6.6 12.6667 6.33333 12.6667 9.73333V15.3333H16V8.6C16 3.33333 10.0667 3.53333 8.66667 6.13333V4.66667Z"
+                                        fill="#46A358" fill-opacity="0.6" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-list__item">
+                            <a class="social-list__link" href="#">
+                                <svg width="19" height="14" viewBox="0 0 19 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.1653 4.42995L15.168 4.43062C15.168 4.43062 15.1676 4.4305 15.1667 4.4303C15.1663 4.4302 15.1658 4.43008 15.1653 4.42995ZM4.32444 4.35686C6.91762 4.19575 11.7483 4.19575 14.3415 4.35686L14.3422 4.3644C14.4047 4.99716 14.4299 5.84143 14.4299 7.01915C14.4299 8.18238 14.4053 9.02689 14.3441 9.66498C11.6962 9.77026 6.97129 9.77027 4.32282 9.66502C4.261 9.03324 4.23602 8.19137 4.23602 7.01915C4.23602 5.84143 4.26123 4.99716 4.32369 4.3644L4.32444 4.35686ZM15.2422 9.61106C15.2422 9.61109 15.2405 9.61148 15.237 9.61215L15.2422 9.61106ZM3.49794 9.60768L3.50063 9.60836C3.49881 9.60793 3.49792 9.60769 3.49794 9.60768ZM0 7.01915C0 11.8412 0.388873 13.63 3.42208 13.8633C6.22196 14.0189 12.4439 14.0189 15.2438 13.8633C18.277 13.7078 18.6659 11.8412 18.6659 7.01915C18.6659 2.19713 18.277 0.408316 15.2438 0.174993C12.4439 -0.0583309 6.22196 -0.0583309 3.42208 0.174993C0.388873 0.408316 0 2.19713 0 7.01915ZM3.49794 4.43062C3.49792 4.43061 3.49884 4.43037 3.50073 4.42992L3.49794 4.43062ZM9.78228 8.73886C8.50388 9.37806 6.99973 8.44845 6.99973 7.01915C6.99973 5.58986 8.50388 4.66025 9.78228 5.29945C11.1994 6.008 11.1994 8.0303 9.78228 8.73886Z"
+                                        fill="#46A358" fill-opacity="0.6" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <h3 class="title">
+                        We accept
+                    </h3>
+                    <ul class="payment-list">
+                        <li class="payment-list__item">
+                            <img class="payment-list__img" src="images/icons/paypal.png" alt="paypal logo">
+                        </li>
+                        <li class="payment-list__item">
+                            <img class="payment-list__img" src="images/icons/mastercard.png" alt="mastercard logo">
+                        </li>
+                        <li class="payment-list__item">
+                            <img class="payment-list__img" src="images/icons/visa.png" alt="visa logo">
+                        </li>
+                        <li class="payment-list__item">
+                            <img class="payment-list__img" src="images/icons/logo-american-express.png"
+                                alt="american express logo">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-basement">
+                © 2021 GreenShop. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.min.js"></script>
+
+</body>
+
+</html>
