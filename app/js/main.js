@@ -1,8 +1,34 @@
 $(function() {
 
-    $('.shop__sort-select, .product-page__input-num, .cart-content__form-input').styler({
+    $(function() {
+        const UPLOAD_BUTTON = document.getElementById("upload-button");
+        const FILE_INPUT = document.querySelector("input[type=file]");
+        const AVATAR = document.getElementById("avatar");
+    
+        UPLOAD_BUTTON.addEventListener("click", () => FILE_INPUT.click());
+    
+        FILE_INPUT.addEventListener("change", event => {
+        const file = event.target.files[0];
+    
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+    
+        reader.onloadend = () => {
+            AVATAR.setAttribute("aria-label", file.name);
+            AVATAR.style.background = `url(${reader.result}) center center/cover`;
+        };
+        });
+    });
+    
+
+    $('.shop__sort-select, .product-page__input-num, .cart-content__form-input, .input-state, .input-country').styler({
         selectSmartPositioning: false,
-    });   
+    });  
+    
+    $('.account-menu__link').on('click',function(e){
+        $('.account-menu__link').removeClass('account-menu__link-active');
+        $(this).addClass('account-menu__link-active');
+    });
 
     $('.cart-content__kill-btn').on('click', function(){      
         $($(this).closest('.cart-content')).addClass('cart-content__killed');
@@ -89,4 +115,6 @@ $(function() {
         },
     });
  
+
+
 });
