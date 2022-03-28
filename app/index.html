@@ -10,19 +10,18 @@
 </head>
 
 <body>
-
-
+     
     <div class="login modal" id="modal">
         <button data-close-button class="login__close"></button>
         <div class="login__top">
             <ul class="login__list">
                 <li class="login__list-item">
-                    <h3 class="login__title">
+                    <a class="login__link login__link-login login__link-active" href="#modal">
                         Login
-                    </h3>
+                    </a>
                 </li>
                 <li class="login__list-item">
-                    <a class="login__link" href="#">
+                    <a class="login__link login__link-register" data-close-button href="#">
                         Register
                     </a>
                 </li>
@@ -37,19 +36,72 @@
             <a class="login__form-link" href="#">
                 Forgot Password?
             </a>
-            <button class="login__form-btn">
+            <button class="login__form-btn" type="submit">
                 Login
             </button>
         </form>
-        <p class="login__text">
-            Or login with
-        </p>
+        <div class="login__textbox">
+            <span class="login__text-line"></span>
+            <span class="login__text">
+                Or login with
+            </span>
+            <span class="login__text-line"></span>
+        </div>
         <form class="login__aditional" action="#">
-            <input class="login__aditional-input" type="text">
-            <input class="login__aditional-input" type="text">
+            <div id="g_id_onload" data-client_id="YOUR_GOOGLE_CLIENT_ID"
+                data-login_uri="https://your.domain/your_login_endpoint" data-auto_prompt="false">
+            </div>
+            <div class="g_id_signin" data-type="standard" data-size="large" data-theme="outline"
+                data-text="sign_in_with" data-shape="rectangular" data-logo_alignment="left">
+            </div>
+        </form>
+    </div>
+    <div class="register">
+        <button class="register__close"></button>
+        <div class="register__top">
+            <ul class="register__list">
+                <li class="register__list-item">
+                    <a class="register__link register__link-login" data-modal-target="#modal" href="#">
+                        Login
+                    </a>
+                </li>
+                <li class="register__list-item">
+                    <a class="register__link register__link-register register__link-active" href="#">
+                        Register
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <form class="register__form" action="#">
+            <p class="register__form-text">
+                Enter your email and password to register.
+            </p>
+            <input class="register__form-input" type="text" placeholder="Username" required>
+            <input class="register__form-input" type="email" placeholder="Enter your email address" required>
+            <input class="register__form-input" type="password" placeholder="Password" required>
+            <input class="register__form-input" type="password" placeholder="Confirm Password" required>
+            <button class="register__form-btn">
+                Register
+            </button>
+        </form>
+        <div class="register__textbox">
+            <span class="register__text-line"></span>
+            <span class="register__text">
+                Or register with
+            </span>
+            <span class="register__text-line"></span>
+        </div>
+        <form class="register__aditional" action="#">
+            <div id="g_id_onload" data-client_id="YOUR_GOOGLE_CLIENT_ID"
+                data-login_uri="https://your.domain/your_login_endpoint" data-auto_prompt="false">
+            </div>
+            <div class="g_id_signin" data-type="standard" data-size="large" data-theme="outline"
+                data-text="continue_with" data-shape="rectangular" data-logo_alignment="left">
+            </div>
         </form>
     </div>
     <div id="overlay"></div>
+    <div class="overlay"></div>
 
     <header class="header">
         <div class="container">
@@ -60,7 +112,7 @@
                 <nav class="menu">
                     <ul class="menu__list">
                         <li class="menu__list-item">
-                            <a class="menu__list-link" href="#">
+                            <a class="menu__list-link menu__list-link--active" href="#">
                                 Home
                             </a>
                         </li>
@@ -1286,6 +1338,7 @@
         </div>
     </footer>
 
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="js/main.min.js"></script>
 
 </body>

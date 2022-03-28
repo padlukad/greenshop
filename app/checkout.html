@@ -11,6 +11,238 @@
 
 <body>
 
+    <div class="login modal" id="modal">
+        <button data-close-button class="login__close"></button>
+        <div class="login__top">
+            <ul class="login__list">
+                <li class="login__list-item">
+                    <a class="login__link login__link-login login__link-active" href="#modal">
+                        Login
+                    </a>
+                </li>
+                <li class="login__list-item">
+                    <a class="login__link login__link-register" data-close-button href="#">
+                        Register
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <form class="login__form" action="#">
+            <p class="login__form-text">
+                Enter your username and password to login.
+            </p>
+            <input class="login__form-input" type="text" placeholder="almamun_uxui@outlook.com" required>
+            <input class="login__form-input" type="password" placeholder="***********" required>
+            <a class="login__form-link" href="#">
+                Forgot Password?
+            </a>
+            <button class="login__form-btn" type="submit">
+                Login
+            </button>
+        </form>
+        <div class="login__textbox">
+            <span class="login__text-line"></span>
+            <span class="login__text">
+                Or login with
+            </span>
+            <span class="login__text-line"></span>
+        </div>
+        <form class="login__aditional" action="#">
+            <div id="g_id_onload" data-client_id="YOUR_GOOGLE_CLIENT_ID"
+                data-login_uri="https://your.domain/your_login_endpoint" data-auto_prompt="false">
+            </div>
+            <div class="g_id_signin" data-type="standard" data-size="large" data-theme="outline"
+                data-text="sign_in_with" data-shape="rectangular" data-logo_alignment="left">
+            </div>
+        </form>
+    </div>
+    <div class="register">
+        <button class="register__close"></button>
+        <div class="register__top">
+            <ul class="register__list">
+                <li class="register__list-item">
+                    <a class="register__link register__link-login" data-modal-target="#modal" href="#">
+                        Login
+                    </a>
+                </li>
+                <li class="register__list-item">
+                    <a class="register__link register__link-register register__link-active" href="#">
+                        Register
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <form class="register__form" action="#">
+            <p class="register__form-text">
+                Enter your email and password to register.
+            </p>
+            <input class="register__form-input" type="text" placeholder="Username" required>
+            <input class="register__form-input" type="email" placeholder="Enter your email address" required>
+            <input class="register__form-input" type="password" placeholder="Password" required>
+            <input class="register__form-input" type="password" placeholder="Confirm Password" required>
+            <button class="register__form-btn">
+                Register
+            </button>
+        </form>
+        <div class="register__textbox">
+            <span class="register__text-line"></span>
+            <span class="register__text">
+                Or register with
+            </span>
+            <span class="register__text-line"></span>
+        </div>
+        <form class="register__aditional" action="#">
+            <div id="g_id_onload" data-client_id="YOUR_GOOGLE_CLIENT_ID"
+                data-login_uri="https://your.domain/your_login_endpoint" data-auto_prompt="false">
+            </div>
+            <div class="g_id_signin" data-type="standard" data-size="large" data-theme="outline"
+                data-text="continue_with" data-shape="rectangular" data-logo_alignment="left">
+            </div>
+        </form>
+    </div>
+    <div class="confirm">
+        <button class="confirm__close"></button>
+        <div class="confirm__top">
+            <div class="confirm__imgbox">
+                <img src="images/confirm.png" alt="letter picture">
+            </div>
+            <p class="confirm__top-text">
+                Your order has been received
+            </p>
+        </div>
+        <div class="confirm__info">
+            <div class="confirm__info-item">
+                <h6 class="confirm__info-title">
+                    Order Number
+                </h6>
+                <p class="confirm__info-number">19586687</p>
+            </div>
+            <div class="confirm__info-item">
+                <h6 class="confirm__info-title">
+                    Date
+                </h6>
+                <p class="confirm__info-number">15 Sep 2021</p>
+            </div>
+            <div class="confirm__info-item">
+                <h6 class="confirm__info-title">
+                    Total
+                </h6>
+                <p class="confirm__info-number">2.699.00</p>
+            </div>
+            <div class="confirm__info-item">
+                <h6 class="confirm__info-title">
+                    Payment Method
+                </h6>
+                <p class="confirm__info-number">Cash on delivery</p>
+            </div>
+        </div>
+        <div class="confirm__wrapper">
+            <div class="confirm__inner">
+                <h3 class="title">
+                    Order Details
+                </h3>
+                <div class="cart__inner-top">
+                    <div class="cart-content__info cart__inner-top--title">
+                        <div class="cart-content__inner cart__inner-top--title">
+                            Products
+                        </div>
+                    </div>
+                    <div class="cart-content__quantity cart__inner-top--title">
+                        Qty
+                    </div>
+                    <div class="cart-content__total">
+                        Total
+                    </div>
+                </div>
+                <div class="cart-content">
+                    <div class="cart-content__info">
+                        <div class="cart-content__inner">
+                            <div class="cart-content__imgbox">
+                                <img src="images/products/1.png" alt="product image">
+                            </div>
+                            <div class="cart-content__wrapper">
+                                <div class="cart-content__name">
+                                    Barberton Daisy
+                                </div>
+                                <div class="cart-content__sku">
+                                    SKU: <span>1995751877966</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-content__quantity">
+                        <span>(x <span class="price-factor">2</span>)</span>
+                    </div>
+                    <div class="cart-content__total">
+                        $<span class="product-total">238.00</span>
+                    </div>
+                </div>
+                <div class="cart-content">
+                    <div class="cart-content__info">
+                        <div class="cart-content__inner">
+                            <div class="cart-content__imgbox">
+                                <img src="images/products/2.png" alt="product image">
+                            </div>
+                            <div class="cart-content__wrapper">
+                                <div class="cart-content__name">
+                                    Blushing Bromeliad
+                                </div>
+                                <div class="cart-content__sku">
+                                    SKU: <span>19957518757065</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-content__quantity">
+                        <span>(x <span class="price-factor">6</span>)</span>
+                    </div>
+                    <div class="cart-content__total">
+                        $<span class="product-total">834.00</span>
+                    </div>
+                </div>
+                <div class="cart-content">
+                    <div class="cart-content__info">
+                        <div class="cart-content__inner">
+                            <div class="cart-content__imgbox">
+                                <img src="images/products/3.png" alt="product image">
+                            </div>
+                            <div class="cart-content__wrapper">
+                                <div class="cart-content__name">
+                                    Aluminum Plant
+                                </div>
+                                <div class="cart-content__sku">
+                                    SKU: <span>1995751877786</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-content__quantity">
+                        <span>(x <span class="price-factor">9</span>)</span>
+                    </div>
+                    <div class="cart-content__total">
+                        $<span class="product-total">1.611.00</span>
+                    </div>
+                </div>  
+                <div class="cart-aside__total-shipingbox">
+                    <span>Shiping</span>
+                    <span class="span-prefix">$<span class="shiping-sum">16.00</span></span>
+                </div>    
+                <div class="cart-aside__total-total">
+                    <span>Total</span>
+                    <span class="span-prefix">$<span class="total-sum">2.699.00</span></span>
+                </div>
+            </div>
+            <p class="confirm__text">
+                Your order is currently being processed. You will receive an order confirmation email shortly with the expected delivery date for your items.
+            </p>
+        </div>
+        <button class="confirm__btn">
+            Track your order
+        </button>
+    </div>
+    <div id="overlay"></div>
+    <div class="overlay"></div>
+
     <header class="header">
         <div class="container">
             <div class="header__inner">
@@ -25,7 +257,7 @@
                             </a>
                         </li>
                         <li class="menu__list-item">
-                            <a class="menu__list-link" href="#">
+                            <a class="menu__list-link menu__list-link--active" href="#">
                                 Shop
                             </a>
                         </li>
@@ -65,7 +297,7 @@
                             </a>
                         </li>
                         <li class="user-nav__list-item">
-                            <button class="user-nav__btn">
+                            <button data-modal-target="#modal" class="user-nav__btn">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M18.1601 10.1006H8.12598" stroke="white" stroke-width="1.5"
@@ -622,7 +854,6 @@
                                         Cash on delivery
                                     </div>
                                 </label>
-
                             </div>
                             <button class="payment-form__btn" type="submit">
                                 Place Order
@@ -888,8 +1119,8 @@
         </div>
     </footer>
 
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="js/main.min.js"></script>
-
 </body>
 
 </html>

@@ -1,6 +1,5 @@
 $(function() {
-
-   
+ 
     $(function(){
         const openModalButtons = document.querySelectorAll('[data-modal-target]')
         const closeModalButtons = document.querySelectorAll('[data-close-button]')
@@ -33,6 +32,35 @@ $(function() {
         }
     });
 
+    $('.payment-form__btn').on('click', function() {
+        $('.confirm').addClass('confirm-active');
+        $('.overlay').addClass('overlay-active');
+    });
+
+    $('.confirm__close').on('click', function() {
+        $('.confirm').removeClass('confirm-active');
+        $('.overlay').removeClass('overlay-active');
+    });
+
+    $('.login__link-register').on('click', function() {
+        $('.login__link-login').removeClass('login__link-active');
+        $('.register__link-register').addClass('register__link-active');
+        $('.register').addClass('register-active');
+        $('.overlay').addClass('overlay-active');
+    });
+
+    $('.register__close').on('click', function(){
+        $('.register').removeClass('register-active');
+        $('.login__link-login').addClass('login__link-active');
+        $('.register__link-register').removeClass('register__link-active');
+        $('.overlay').removeClass('overlay-active');
+    });
+
+    $('.register__link-login').on('click', function(){
+        $('.register').removeClass('register-active');
+        $('.login__link-login').addClass('login__link-active');
+        $('.overlay').removeClass('overlay-active');
+    });
 
     $(function() {
         const UPLOAD_BUTTON = document.getElementById("upload-button");
@@ -50,7 +78,7 @@ $(function() {
         reader.onloadend = () => {
             AVATAR.setAttribute("aria-label", file.name);
             AVATAR.style.background = `url(${reader.result}) center center/cover`;
-        };
+            };
         });
     });
     
@@ -76,7 +104,7 @@ $(function() {
 
         $('.tabs__item').removeClass('tabs__item-active');
         $($(this).attr('href')).addClass('tabs__item-active');
-    })
+    });
 
     $('.product-page__slider-thumb').slick({
         vertical: true,
@@ -149,6 +177,4 @@ $(function() {
         },
     });
  
-
-
 });
