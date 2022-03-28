@@ -6,7 +6,8 @@
 
 
 
-#overlay{
+#overlay,
+.overlay{
     position: fixed;
     opacity: 0;
     transition: .3s ease-in-out;
@@ -18,21 +19,48 @@
     background-color: rgba(0, 0, 0, 0.5);
     pointer-events: none;
 }
-#overlay.active{
+#overlay.active,
+.overlay.overlay-active{
     opacity: 1;
     pointer-events: all;
 }
 #modal.active{
     transform: translate(-50%, -50%) scale(1);
 }
+
 .login{
-    max-width: 500px;
     max-height: 600px;
+    &__text-line{
+        width: 103px;
+        height: 1px;
+        background-color: #eaeaea;
+    }
+}
+
+.register{
+    max-height: 655px;
+    &__form-input:nth-child(4){       
+        background-image: url('../images/icons/hide.svg');
+        background-repeat: no-repeat;
+        background-position: 98% center;      
+    }
+}
+.register.register-active{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+.login,
+.register{
+    max-width: 500px;
     width: 100%;
     height: 100%;
     border-bottom: 10px solid $accent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: fixed;
-    text-align: center;
     background-color: #fff;
     z-index: 10001;
     top: 50%;
@@ -53,21 +81,22 @@
         border: none;
     }
     &__top{
-        padding: 50px 0;
+        margin-bottom: 50px;
     }
     &__list{
         display: flex;
         justify-content: center;
     }
-    &__title{
-        font-size: 20px;
-        line-height: 16px;
-        color: $accent;
-    }
     &__link{
         font-size: 20px;
         line-height: 16px;
         color: $title;
+        &.login__link-active,
+        &.register__link-active{
+            color: $accent;
+            @extend %pt-700;
+            cursor: default;
+        }
     }
     &__list-item{
         padding: 0 15px;
@@ -84,18 +113,15 @@
     }
     &__form{
         padding-bottom: 40px;
+        display: flex;
+        flex-direction: column;
     }
-    &__aditional{
-        padding-bottom: 58px;
-    }
+
     &__form,
     &__aditional{
         margin: 0 auto;
         max-width: 300px;
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
     &__form-text{
         font-size: 13px;
@@ -141,12 +167,19 @@
         background-color: $accent;
         @extend %pt-700;
     }
+    &__textbox{
+        margin-bottom: 25px;
+        max-width: 300px;
+        display: inline-flex;
+        align-items: center;
+    }
     &__text{
         font-size: 13px;
         line-height: 16px;
+        padding: 0 10px;
         color: $title;
-        margin-bottom: 25px;
     }
+
 }
 
 
