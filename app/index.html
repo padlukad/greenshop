@@ -10,8 +10,7 @@
 </head>
 
 <body>
-
-
+     
     <div class="login modal" id="modal">
         <button data-close-button class="login__close"></button>
         <div class="login__top">
@@ -49,8 +48,12 @@
             <span class="login__text-line"></span>
         </div>
         <form class="login__aditional" action="#">
-            <input class="login__aditional-input" type="text">
-            <input class="login__aditional-input" type="text">
+            <div id="g_id_onload" data-client_id="YOUR_GOOGLE_CLIENT_ID"
+                data-login_uri="https://your.domain/your_login_endpoint" data-auto_prompt="false">
+            </div>
+            <div class="g_id_signin" data-type="standard" data-size="large" data-theme="outline"
+                data-text="sign_in_with" data-shape="rectangular" data-logo_alignment="left">
+            </div>
         </form>
     </div>
     <div class="register">
@@ -89,8 +92,12 @@
             <span class="register__text-line"></span>
         </div>
         <form class="register__aditional" action="#">
-            <input class="register__aditional-input" type="text">
-            <input class="register__aditional-input" type="text">
+            <div id="g_id_onload" data-client_id="YOUR_GOOGLE_CLIENT_ID"
+                data-login_uri="https://your.domain/your_login_endpoint" data-auto_prompt="false">
+            </div>
+            <div class="g_id_signin" data-type="standard" data-size="large" data-theme="outline"
+                data-text="continue_with" data-shape="rectangular" data-logo_alignment="left">
+            </div>
         </form>
     </div>
     <div id="overlay"></div>
@@ -105,7 +112,7 @@
                 <nav class="menu">
                     <ul class="menu__list">
                         <li class="menu__list-item">
-                            <a class="menu__list-link" href="#">
+                            <a class="menu__list-link menu__list-link--active" href="#">
                                 Home
                             </a>
                         </li>
@@ -1331,6 +1338,7 @@
         </div>
     </footer>
 
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="js/main.min.js"></script>
 
 </body>

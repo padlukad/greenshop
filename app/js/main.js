@@ -1,6 +1,5 @@
 $(function() {
-
-   
+ 
     $(function(){
         const openModalButtons = document.querySelectorAll('[data-modal-target]')
         const closeModalButtons = document.querySelectorAll('[data-close-button]')
@@ -33,6 +32,16 @@ $(function() {
         }
     });
 
+    $('.payment-form__btn').on('click', function() {
+        $('.confirm').addClass('confirm-active');
+        $('.overlay').addClass('overlay-active');
+    });
+
+    $('.confirm__close').on('click', function() {
+        $('.confirm').removeClass('confirm-active');
+        $('.overlay').removeClass('overlay-active');
+    });
+
     $('.login__link-register').on('click', function() {
         $('.login__link-login').removeClass('login__link-active');
         $('.register__link-register').addClass('register__link-active');
@@ -52,7 +61,6 @@ $(function() {
         $('.login__link-login').addClass('login__link-active');
         $('.overlay').removeClass('overlay-active');
     });
-
 
     $(function() {
         const UPLOAD_BUTTON = document.getElementById("upload-button");
@@ -169,6 +177,4 @@ $(function() {
         },
     });
  
-
-
 });
