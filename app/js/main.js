@@ -1,36 +1,55 @@
 $(function() {
  
     $(function(){
-        const openModalButtons = document.querySelectorAll('[data-modal-target]')
-        const closeModalButtons = document.querySelectorAll('[data-close-button]')
-        const overlay = document.getElementById('overlay')
+        const openModalButtons = document.querySelectorAll('[data-modal-target]');
+        const closeModalButtons = document.querySelectorAll('[data-close-button]');
+        const overlay = document.getElementById('overlay');
 
         openModalButtons.forEach(button => {
             button.addEventListener('click', () => {
-                const modal = document.querySelector(button.dataset.modalTarget)
-                openModal(modal)
+                const modal = document.querySelector(button.dataset.modalTarget);
+                openModal(modal);
             })
         })
 
         closeModalButtons.forEach(button => {
             button.addEventListener('click', () => {
-                const modal = button.closest('.modal')
-                closeModal(modal)
+                const modal = button.closest('.modal');
+                closeModal(modal);
             })
         })
 
         function openModal(modal) {
             if (modal == null) return
-            modal.classList.add('active')
-            overlay.classList.add('active')
+            modal.classList.add('active');
+            overlay.classList.add('active');
         }
 
         function closeModal(modal) {
             if (modal == null) return
-            modal.classList.remove('active')
-            overlay.classList.remove('active')
+            modal.classList.remove('active');
+            overlay.classList.remove('active');
         }
     });
+
+    $(function(){
+        window.addEventListener('click', function(event){
+            //Обьявили переменную для счетчика
+            let myCounter;
+            // Проверяем клик по кнопкам счетчика
+            if(event.target.classList.contains('plus') || event.target.classList.contains('minus')) {
+                // Находим значение из input и заносим её в 
+                myCounter = event.target.closest('form').querySelector('#counter').value;
+                console.log (myCounter);
+            }
+
+        });
+    });
+
+    // $(function(){
+    //     window.addEventListener('click', function(event){
+        
+    // });
 
     $('.payment-form__btn').on('click', function() {
         $('.confirm').addClass('confirm-active');
@@ -147,10 +166,6 @@ $(function() {
     $('.pagination__list-link').on('click', function(){
         $('.pagination__list-link').removeClass('current-page');
         $(this).addClass('current-page');
-    });
-
-    $('a').on('click', function(event) {
-        event.preventDefault();
     });
 
     var mixer = mixitup('.shop__content-items');
