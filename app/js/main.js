@@ -1,4 +1,23 @@
 $(function() { 
+    $(function() {
+        const UPLOAD_BUTTON = document.getElementById("upload-button");
+        const FILE_INPUT = document.querySelector("input[type=file]");
+        const AVATAR = document.getElementById("avatar");
+    
+        UPLOAD_BUTTON.addEventListener("click", () => FILE_INPUT.click());
+    
+        FILE_INPUT.addEventListener("change", event => {
+        const file = event.target.files[0];
+    
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+    
+        reader.onloadend = () => {
+            AVATAR.setAttribute("aria-label", file.name);
+            AVATAR.style.background = `url(${reader.result}) center center/cover`;
+            };
+        });
+    });
 
     $('.shop__sort-select, .product-page__input-num, .cart-content__form-input, .input-state, .input-country').styler({
         selectSmartPositioning: false,
@@ -150,26 +169,6 @@ $(function() {
         $('.register').removeClass('register-active');
         $('.login__link-login').addClass('login__link-active');
         $('.overlay').removeClass('overlay-active');
-    });
-
-    $(function() {
-        const UPLOAD_BUTTON = document.getElementById("upload-button");
-        const FILE_INPUT = document.querySelector("input[type=file]");
-        const AVATAR = document.getElementById("avatar");
-    
-        UPLOAD_BUTTON.addEventListener("click", () => FILE_INPUT.click());
-    
-        FILE_INPUT.addEventListener("change", event => {
-        const file = event.target.files[0];
-    
-        const reader = new FileReader();
-        reader.readAsDataURL(file);
-    
-        reader.onloadend = () => {
-            AVATAR.setAttribute("aria-label", file.name);
-            AVATAR.style.background = `url(${reader.result}) center center/cover`;
-            };
-        });
     });
 
     // $(function(){
