@@ -1,106 +1,4 @@
-$(function() {
- 
-    $(function(){
-        const openModalButtons = document.querySelectorAll('[data-modal-target]');
-        const closeModalButtons = document.querySelectorAll('[data-close-button]');
-        const overlay = document.getElementById('overlay');
-
-        openModalButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const modal = document.querySelector(button.dataset.modalTarget);
-                openModal(modal);
-            })
-        })
-
-        closeModalButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const modal = button.closest('.modal');
-                closeModal(modal);
-            })
-        })
-
-        function openModal(modal) {
-            if (modal == null) return
-            modal.classList.add('active');
-            overlay.classList.add('active');
-        }
-
-        function closeModal(modal) {
-            if (modal == null) return
-            modal.classList.remove('active');
-            overlay.classList.remove('active');
-        }
-    });
-
-    $(function(){
-        window.addEventListener('click', function(event){
-            //Обьявили переменную для счетчика
-            let myCounter;
-            // Проверяем клик по кнопкам счетчика
-            if(event.target.classList.contains('plus') || event.target.classList.contains('minus')) {
-                // Находим значение из input и заносим её в 
-                myCounter = event.target.closest('form').querySelector('#counter').value;
-                console.log (myCounter);
-            }
-
-        });
-    });
-
-    // $(function(){
-    //     window.addEventListener('click', function(event){
-        
-    // });
-
-    $('.payment-form__btn').on('click', function() {
-        $('.confirm').addClass('confirm-active');
-        $('.overlay').addClass('overlay-active');
-    });
-
-    $('.confirm__close').on('click', function() {
-        $('.confirm').removeClass('confirm-active');
-        $('.overlay').removeClass('overlay-active');
-    });
-
-    $('.login__link-register').on('click', function() {
-        $('.login__link-login').removeClass('login__link-active');
-        $('.register__link-register').addClass('register__link-active');
-        $('.register').addClass('register-active');
-        $('.overlay').addClass('overlay-active');
-    });
-
-    $('.register__close').on('click', function(){
-        $('.register').removeClass('register-active');
-        $('.login__link-login').addClass('login__link-active');
-        $('.register__link-register').removeClass('register__link-active');
-        $('.overlay').removeClass('overlay-active');
-    });
-
-    $('.register__link-login').on('click', function(){
-        $('.register').removeClass('register-active');
-        $('.login__link-login').addClass('login__link-active');
-        $('.overlay').removeClass('overlay-active');
-    });
-
-    $(function() {
-        const UPLOAD_BUTTON = document.getElementById("upload-button");
-        const FILE_INPUT = document.querySelector("input[type=file]");
-        const AVATAR = document.getElementById("avatar");
-    
-        UPLOAD_BUTTON.addEventListener("click", () => FILE_INPUT.click());
-    
-        FILE_INPUT.addEventListener("change", event => {
-        const file = event.target.files[0];
-    
-        const reader = new FileReader();
-        reader.readAsDataURL(file);
-    
-        reader.onloadend = () => {
-            AVATAR.setAttribute("aria-label", file.name);
-            AVATAR.style.background = `url(${reader.result}) center center/cover`;
-            };
-        });
-    });
-    
+$(function() { 
 
     $('.shop__sort-select, .product-page__input-num, .cart-content__form-input, .input-state, .input-country').styler({
         selectSmartPositioning: false,
@@ -191,5 +89,155 @@ $(function() {
             $('.filter__price-to').text(data.to);
         },
     });
- 
+
+    $(function(){
+        const openModalButtons = document.querySelectorAll('[data-modal-target]')
+        const closeModalButtons = document.querySelectorAll('[data-close-button]')
+        const overlay = document.getElementById('overlay')
+
+        openModalButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const modal = document.querySelector(button.dataset.modalTarget)
+                openModal(modal)
+            })
+        })
+
+        closeModalButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const modal = button.closest('.modal')
+                closeModal(modal)
+            })
+        })
+
+        function openModal(modal) {
+            if (modal == null) return
+            modal.classList.add('active')
+            overlay.classList.add('active')
+        }
+
+        function closeModal(modal) {
+            if (modal == null) return
+            modal.classList.remove('active')
+            overlay.classList.remove('active')
+        }
+    });
+
+    $('.payment-form__btn').on('click', function() {
+        $('.confirm').addClass('confirm-active');
+        $('.overlay').addClass('overlay-active');
+    });
+
+    $('.confirm__close').on('click', function() {
+        $('.confirm').removeClass('confirm-active');
+        $('.overlay').removeClass('overlay-active');
+    });
+
+    $('.login__link-register').on('click', function() {
+        $('.login__link-login').removeClass('login__link-active');
+        $('.register__link-register').addClass('register__link-active');
+        $('.register').addClass('register-active');
+        $('.overlay').addClass('overlay-active');
+    });
+
+    $('.register__close').on('click', function(){
+        $('.register').removeClass('register-active');
+        $('.login__link-login').addClass('login__link-active');
+        $('.register__link-register').removeClass('register__link-active');
+        $('.overlay').removeClass('overlay-active');
+    });
+
+    $('.register__link-login').on('click', function(){
+        $('.register').removeClass('register-active');
+        $('.login__link-login').addClass('login__link-active');
+        $('.overlay').removeClass('overlay-active');
+    });
+
+    $(function() {
+        const UPLOAD_BUTTON = document.getElementById("upload-button");
+        const FILE_INPUT = document.querySelector("input[type=file]");
+        const AVATAR = document.getElementById("avatar");
+    
+        UPLOAD_BUTTON.addEventListener("click", () => FILE_INPUT.click());
+    
+        FILE_INPUT.addEventListener("change", event => {
+        const file = event.target.files[0];
+    
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+    
+        reader.onloadend = () => {
+            AVATAR.setAttribute("aria-label", file.name);
+            AVATAR.style.background = `url(${reader.result}) center center/cover`;
+            };
+        });
+    });
+
+    // $(function(){
+
+    //     const cartWrapper = document.querySelector('.cart__wrapper');
+    //     // отслеживаем клик на странице
+    //     window.addEventListener('click', function(event){    
+    //         //проверяем клик по "добавить в корзину"
+    //         if (event.target.classList.contains('product-page__form-cart')) {
+    //             // Находим товар, внутри которого был совершен клик
+    //             const productPage = event.target.closest('.product-page__inner');
+    //             // Собираем данные с этого товара и записываем их в единый обьект
+    //             const productInfo = {
+    //                 name: productPage.querySelector('.product-page__title').innerText,
+    //                 imageSrc: productPage.querySelector('.product-page__big-img').getAttribute('src'),
+    //                 skuNumber: productPage.querySelector('.sku__number').innerText,
+    //                 price: productPage.querySelector('.product-page__price').innerText,
+    //                 num: productPage.querySelector('#counter').value,
+    //                 size: productPage.querySelector('input[name="size"]:checked').value,
+    //             }
+    //             console.log (productInfo);
+    //         }
+    //         // Собранные данные подставляем в шаблон товара в корзине
+    //         const cartItemHTML = `<div class="cart__inner-item cart-content">
+    //                                     <div class="cart-content__info">
+    //                                         <div class="cart-content__inner">
+    //                                             <div class="cart-content__imgbox">
+    //                                                 <img src="${productInfo.imageSrc}" alt="${productInfo.name}">
+    //                                             </div>
+    //                                             <div class="cart-content__wrapper">
+    //                                                 <div class="cart-content__name">
+    //                                                     ${productInfo.name}
+    //                                                 </div>                                      
+    //                                                 <div class="cart-content__sku">
+    //                                                     SKU: <span>${productInfo.skuNumber}</span>
+    //                                                 </div>
+    //                                             </div>
+    //                                         </div>
+    //                                         <div class="cart-content__price">
+    //                                             $<span class="product-price">${productInfo.price}</span> 
+    //                                         </div>
+    //                                     </div>
+    //                                     <div class="cart-content__quantity">
+    //                                         <form class="cart-content__form" action="#">
+    //                                             <input class="cart-content__form-input" type="number" value="${productInfo.num}" min="1">
+    //                                         </form>
+    //                                     </div>
+    //                                     <div class="cart-content__total">
+    //                                         $<span class="product-total">238.00</span> 
+    //                                     </div>
+    //                                     <div class="cart-content__kill">
+    //                                         <button class="cart-content__kill-btn">
+    //                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    //                                                 <g id="Iconly/Curved/Delete">
+    //                                                 <g id="Delete">
+    //                                                 <path id="Stroke 1" d="M18.8892 9.55408C18.8892 17.5731 20.0435 21.1979 12.2797 21.1979C4.5149 21.1979 5.693 17.5731 5.693 9.55408" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    //                                                 <path id="Stroke 3" d="M20.3651 6.47979H4.2146" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    //                                                 <path id="Stroke 5" d="M15.7148 6.47979C15.7148 6.47979 16.2434 2.71408 12.2891 2.71408C8.33578 2.71408 8.86435 6.47979 8.86435 6.47979" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    //                                                 </g>
+    //                                                 </g>
+    //                                             </svg>
+    //                                         </button>
+    //                                     </div>
+    //                                 </div>`;
+    //             // Отображаем товар в корзине
+    //         cartWrapper.insertAdjacentHTML('beforeend', cartItemHTML);
+                
+    //     });
+    // });
+
 });
