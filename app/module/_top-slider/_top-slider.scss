@@ -1,0 +1,56 @@
+.top-slider{
+    margin-bottom: 25px;
+}
+
+.slider{
+    &__item{
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        background: linear-gradient(97.77deg, rgba(245, 245, 245, 0.5) -23.46%, rgba(245, 245, 245, 0.5) 107.51%);
+    }
+    &__content{
+        padding: 68px 40px 85px;
+    }
+    &__imgbox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__item-subtitle{
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: $title;
+        margin-bottom: 7px;
+    }
+    .shop-title{
+        text-transform: uppercase;
+        font-size: 70px;
+        line-height: 70px;
+        color: $title;
+        @extend %pt-700;
+        span{
+            color: $accent;
+        }
+        margin-bottom: 5px;
+    }
+    &__item-text{
+        margin-bottom: 44px;
+    }
+    &__item-link{
+        width: 140px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        text-transform: uppercase;
+        background-color: $accent;
+        color: #fff;
+        @extend %pt-700;
+    }
+    .slick-dots{
+        right: 0;
+        left: 0;
+        bottom: 10px;
+    }
+}

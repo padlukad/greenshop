@@ -1,0 +1,282 @@
+.cart{
+    margin-bottom: 100px;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__wrapper{
+        max-width: 800px;
+        width: 100%;
+    }
+    &__inner-top{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
+        .cart-content__total{
+            color: $title;
+            @extend %pt-400;
+        }
+    }
+    &__inner-top--title{
+        color: $title;
+    }
+}
+
+.cart-aside{
+    max-width: 340px;
+    width: 100%;
+    .title{
+        padding-bottom: 10px;
+        border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
+        margin-bottom: 10px;
+    }
+    &__totals{
+        margin-bottom: 15px;
+    }
+    &__total-subtotal,
+    &__total-discount,
+    &__total-shipingbox,
+    &__total-total{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span{
+            font-size: 15px;
+            line-height: 16px;
+            color: $title;
+        }
+        span[class]{
+            font-size: 18px;
+            line-height: 16px;
+        }
+    }   
+    &__total-subtotal{
+        margin-bottom: 15px;
+    }
+    &__total-discount{
+        margin-bottom: 20px;
+    }
+    &__total-shipingbox{
+       margin-bottom: 10px;
+    }
+    &__total-shiping{
+        margin-bottom: 25px;
+    }
+    &__total-shiping--info{
+        font-size: 12px;
+        line-height: 16px;
+        color: $accent;
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__total-total{
+        @extend %pt-700;
+        margin-bottom: 30px;
+        span[class]{
+            font-size: 18px;
+            line-height: 16px;
+            color: $accent;
+        }
+    }
+    &__total-done{
+        max-width: 340px;
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $accent;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+    }
+    &__back{
+        font-size: 15px;
+        line-height: 16px;
+        color: $accent;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.coupon-form{
+    margin-bottom: 30px;
+    &__title{
+        font-size: 14px;
+        line-height: 16px;
+        color: $title;
+        margin-bottom: 10px;
+    }
+    label{
+        display: flex;
+    }
+    &__input{
+        width: 240px;
+        height: 40px;
+        padding: 0 10px;
+        border: 1px solid $accent;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        outline: none;
+        &::placeholder{
+            color: #A5A5A5;
+            font-size: 14px;
+            line-height: 15px;
+        }
+    }
+    &__btn{
+        @extend %pt-700;
+        width: 100px;
+        height: 40px;
+        border: none;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        color: #fff;
+        background-color: $accent;
+    }
+}
+
+.cart-content.cart-content__killed{
+    display: none;
+}
+
+.cart-content{
+    margin-bottom: 10px;
+    &:last-child{
+        margin-bottom: 0;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $bg;
+    height: 70px;
+    &__info{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 380px;
+        width: 100%;
+    }
+    &__inner{
+        display: flex;
+        align-items: center;
+    }
+    &__imgbox{
+        width: 70px;
+        height: 70px;
+        margin-right: 15px;
+        img{
+            width: 70px;
+            height: 70px;
+            object-fit: scale-down;
+        }
+    }
+    &__name{
+        color: $title;
+        margin-bottom: 5px;
+    }
+    &__sku{
+        font-size: 14px;
+        line-height: 16px;
+        color: #A5A5A5;
+        span{
+            color: $default;
+        }
+    }
+    &__price{
+        max-width: 80px;
+        width: 100%;
+    }
+    &__quantity{
+        max-width: 90px;
+        width: 100%;
+    }
+    &__form-input{
+        width: 100%;
+        position: relative;
+        border: none;
+        outline: none;
+        background-color: $bg;
+    }
+    .jq-number__field input{
+        width: 100%;
+        font-size: 17px;
+        line-height: 10px;
+        @extend %pt-400;
+        color: $title;
+        text-align: center;
+        padding: 2px 22px;
+    }
+    .jq-number__spin{
+        position: absolute;
+        width: 22px;
+        height: 25px;
+        border-radius: 30px;
+        background: $accent;
+        cursor: pointer;
+        bottom: 1px;
+    }
+    .jq-number__spin.minus{
+        left: 0;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 2px;
+            background-color: #fff;
+            top: 48%;
+            left: 33%;
+        }
+    }
+    .jq-number__spin.plus{
+        right: 0;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 2px;
+            background-color: #fff;
+            top: 48%;
+            right: 31%;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 8px;
+            background-color: #fff;
+            top: 35%;
+            right: 44%;
+        }
+    }
+    &__total{
+        @extend %pt-700;
+        color: $accent;
+        max-width: 80px;
+        width: 100%;
+    }
+    &__kill{
+        max-width: 80px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__kill-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background-color: transparent;
+        width: 24px;
+        height: 24px;
+        padding: 0;
+        &:hover{
+            path{
+                stroke: $accent;
+            }
+        }
+    }
+}

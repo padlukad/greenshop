@@ -1,4 +1,5 @@
 $(function() { 
+
     $(function() {
         const UPLOAD_BUTTON = document.getElementById("upload-button");
         const FILE_INPUT = document.querySelector("input[type=file]");
@@ -18,11 +19,22 @@ $(function() {
             };
         });
     });
-
+   
     $('.shop__sort-select, .product-page__input-num, .cart-content__form-input, .input-state, .input-country').styler({
         selectSmartPositioning: false,
     });  
     
+    $('.payment-form__btn').on('click',function(e){
+        e.preventDefault();
+        $('.confirm').addClass('confirm-active');
+        $('.overlay').addClass('overlay-active');
+    });
+
+    $('.confirm__close, .overlay').on('click',function(){
+        $('.confirm').removeClass('confirm-active');
+        $('.overlay').removeClass('overlay-active');
+    });
+
     $('.account-menu__link').on('click',function(e){
         $('.account-menu__link').removeClass('account-menu__link-active');
         $(this).addClass('account-menu__link-active');
@@ -75,16 +87,6 @@ $(function() {
         slidesToScroll: 5,
     });
 
-    $('.shop__mix-btn').on('click', function(){
-        $('.shop__mix-btn').removeClass('shop__mix-btn--active');
-        $(this).addClass('shop__mix-btn--active');
-    });
-
-    $('.pagination__list-link').on('click', function(){
-        $('.pagination__list-link').removeClass('current-page');
-        $(this).addClass('current-page');
-    });
-
     var mixer = mixitup('.shop__content-items');
 
     $('.slider').slick({
@@ -109,68 +111,40 @@ $(function() {
         },
     });
 
-    $(function(){
-        const openModalButtons = document.querySelectorAll('[data-modal-target]')
-        const closeModalButtons = document.querySelectorAll('[data-close-button]')
-        const overlay = document.getElementById('overlay')
-
-        openModalButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const modal = document.querySelector(button.dataset.modalTarget)
-                openModal(modal)
-            })
-        })
-
-        closeModalButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const modal = button.closest('.modal')
-                closeModal(modal)
-            })
-        })
-
-        function openModal(modal) {
-            if (modal == null) return
-            modal.classList.add('active')
-            overlay.classList.add('active')
-        }
-
-        function closeModal(modal) {
-            if (modal == null) return
-            modal.classList.remove('active')
-            overlay.classList.remove('active')
-        }
+    $('.shop__mix-btn').on('click', function(){
+        $('.shop__mix-btn').removeClass('shop__mix-btn--active');
+        $(this).addClass('shop__mix-btn--active');
     });
 
-    $('.payment-form__btn').on('click', function() {
-        $('.confirm').addClass('confirm-active');
+    $('.pagination__list-link').on('click', function(){
+        $('.pagination__list-link').removeClass('current-page');
+        $(this).addClass('current-page');
+    });
+
+    $('#login-button').on('click', function(){
+        $('.login').addClass('login-active');
         $('.overlay').addClass('overlay-active');
     });
 
-    $('.confirm__close').on('click', function() {
-        $('.confirm').removeClass('confirm-active');
-        $('.overlay').removeClass('overlay-active');
-    });
-
-    $('.login__link-register').on('click', function() {
-        $('.login__link-login').removeClass('login__link-active');
-        $('.register__link-register').addClass('register__link-active');
+    $('.login__link-register').on('click', function(){
+        $('.login').removeClass('login-active');
         $('.register').addClass('register-active');
-        $('.overlay').addClass('overlay-active');
-    });
-
-    $('.register__close').on('click', function(){
-        $('.register').removeClass('register-active');
-        $('.login__link-login').addClass('login__link-active');
-        $('.register__link-register').removeClass('register__link-active');
-        $('.overlay').removeClass('overlay-active');
     });
 
     $('.register__link-login').on('click', function(){
         $('.register').removeClass('register-active');
-        $('.login__link-login').addClass('login__link-active');
+        $('.login').addClass('login-active');
+    });
+
+    $('.register__close, .overlay').on('click', function(){
+        $('.register').removeClass('register-active');
         $('.overlay').removeClass('overlay-active');
     });
 
+    $('.login__close, .overlay').on('click', function(){
+        $('.login').removeClass('login-active');
+        $('.overlay').removeClass('overlay-active');
+    });
     // $(function(){
 
     //     const cartWrapper = document.querySelector('.cart__wrapper');
