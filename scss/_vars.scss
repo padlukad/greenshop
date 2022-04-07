@@ -1,0 +1,23 @@
+$default: #727272;
+$title: #3d3d3d;
+$accent: #46A358;
+$bg: #FBFBFB;
+
+%pt-700{
+    font-family: 'PTSans-Bold';
+    font-weight: 700;
+}
+
+%pt-400{
+    font-family: 'PTSans-Regular';
+    font-weight: 400;
+}
+
+%checkbox-hidden,
+%radio-hidden{
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+}

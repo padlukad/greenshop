@@ -1,0 +1,152 @@
+html,
+body{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    line-height: 22px;
+    color: $default;
+    @extend %pt-400;
+}
+
+.main{
+    flex-grow: 1;
+}
+
+.container{
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.title{
+    font-size: 18px;
+    line-height: 24px;
+    color: $title;
+}
+.accent-title{
+    font-size: 17px;
+    line-height: 16px;
+    color: $accent;
+    @extend %pt-700;
+    padding-bottom: 12px;
+    border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
+}
+
+.breadcrumbs{
+    font-size: 15px;
+    line-height: 16px;
+    padding: 45px 0;
+    &__list{
+        display: flex;
+    }
+    &__item+.breadcrumbs__item{
+        margin-left: 5px;
+    }
+    &__link{
+        color: $title;
+        @extend %pt-700;
+    }
+}
+
+.slick-dots{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li{
+        opacity: 0.3;
+        
+    }
+    li+li{
+        margin-left: 8px;
+    }
+    button{
+        padding: 0;
+        margin: 0;
+        width: 8px;
+        height: 8px;
+        border: none;
+        border-radius: 50%;
+        font-size: 0;
+        background-color: $accent;
+    }
+    .slick-active{
+        opacity: 1;
+    }
+}
+
+.pagination{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 18px;
+    line-height: 16px;
+    margin-top: 70px;
+    &__list{
+        display: flex;
+    }
+    &__list-item+.pagination__list-item{
+        margin-left: 10px;
+    }
+    &__arrows{
+        &:hover{
+            transition: all .3s;
+            background-color: $accent;
+            color: #fff;
+            path{
+                transition: all .3s;
+                stroke: #fff;
+            }
+        }
+    }
+    &__prev{
+        margin-right: 10px;
+        transform: rotate(180deg);
+    }
+    &__next{
+        margin-left: 10px;
+    }
+    a{
+        width: 35px;
+        height: 35px;
+        border-radius: 4px;
+        border: 1px solid #E5E5E5;
+        color: $default;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &.current-page{
+            background-color: $accent;
+            color: #fff;
+            path{
+                stroke: #fff;
+            }
+        }
+    }
+}
+
+.star{
+    padding: 0;
+}
+
+.overlay{
+    position: fixed;
+    opacity: 0;
+    transition: .3s ease-in-out;
+    z-index: 10000;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+.overlay.overlay-active{
+    opacity: 1;
+    pointer-events: all;
+}

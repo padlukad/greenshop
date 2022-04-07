@@ -1,0 +1,22 @@
+class="product-price" * class="cart-content__form-input" = class="product-total"
+	119			2				238
+class="product-price" * class="cart-content__form-input" = class="product-total"
+	139			6				834
+class="product-price" * class="cart-content__form-input" = class="product-total"
+	179			9				1.611
+
+
+class="subtotal-sum"= class="product-total" + class="product-total" + class="product-total"
+
+
+	2.683.00		238			834			1611
+
+
+
+X = class="subtotal-sum" - class="discount-sum"
+	2.683.00		0
+
+
+	
+class="total-sum"      =           X       +       <span class="shiping-sum">
+	2.699.00       		2.683.00		16
