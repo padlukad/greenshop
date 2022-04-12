@@ -53,6 +53,8 @@ $(function() {
     $('.cart-content__kill-btn').on('click', function(){      
         $($(this).closest('.cart-content')).addClass('cart-content__killed');
         localStorage.removeItem('item');
+        calcСartSum();
+        location.reload();
     });
 
     $('.tabs__top-link').on('click', function(e){

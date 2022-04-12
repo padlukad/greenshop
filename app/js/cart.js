@@ -18,10 +18,11 @@ function calcСartSum() {
 
     cartItems.forEach(function(cartItem){
         let quantity = cartItem.querySelector('input[name="counter"]').value;
-        const price = cartItem.querySelector('.product-price').innerText;
+        let price = cartItem.querySelector('.product-price').innerText;
+        let newProductTotal = cartItem.querySelector('.product-total');
         let subTotal = parseInt(price) * parseInt(quantity);
+        newProductTotal.innerText = subTotal;
         totalCartSum +=subTotal;
-        console.log(totalCartSum);
     });
 }
 // Insert data in cart item template
@@ -81,19 +82,12 @@ window.onload=function(){
     //click on window
     window.addEventListener('click', function(e){
         let counter;
-        let priceWrapper;
-        let priceEl;
-        let price;
-        let newProductTotal;
         //click strictly on plus or minus
         if(e.target.classList.contains('plus') || e.target.classList.contains('minus')) {
             // wrapper of counter
-            const counterWrapper = e.target.closest('.cart-content__form');           
+            const counterWrapper = e.target.closest('.cart-content__form');
             //input value of counter
             counter = counterWrapper.querySelector('input[name="counter"]').value;
-            priceWrapper = counterWrapper.closest('.cart-content');
-            priceEl = priceWrapper.querySelector('.product-price').innerText;
-            newProductTotal = priceWrapper.querySelector('.product-total');
         }
         //is it button plus
         if(e.target.classList.contains('plus')) {
@@ -105,11 +99,14 @@ window.onload=function(){
                 counter=--counter;
             }
         }
+        // //if killed item
+        // if(e.target.classList.contains('cart-content__kill-btn')){
+        //     e.target.closest('.cart-content').classList.add('cart-content__killed');
+            
+        // }
+
         totalCartSum = 0;
-        productTotal = 0;
         calcСartSum();
-        productTotal = parseInt(priceEl) * counter;
-        newProductTotal.innerText = productTotal;
         subtotalEl.innerText = totalCartSum;
         totalEl.innerText = totalCartSum - discount + shipping;           
     });
